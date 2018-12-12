@@ -1,10 +1,10 @@
 package routers
 
 import (
-	"LogManager/controllers"
+	"LogManager/controllers/AppController"
 	"github.com/astaxie/beego"
 )
 
 func init() {
-    beego.Router("/", &controllers.MainController{})
+	beego.Router("/index", &AppController.AppController{}, "*:Index")
 }
